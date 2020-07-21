@@ -76,7 +76,7 @@ public class JiebaEvaluation extends Evaluation implements WordSegmenter{
     private static String seg(String text, SegMode segMode) {
         StringBuilder result = new StringBuilder();
         for(SegToken token : JIEBA_SEGMENTER.process(text, segMode)){
-            result.append(token.word.getToken()).append(" ");
+            result.append(token.word).append(" ");
         }
         return result.toString();
     }

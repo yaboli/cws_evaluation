@@ -17,3 +17,4 @@ out/
 bin/
 dist/
 logs/
+src/org/apdplat/evaluation/resources/

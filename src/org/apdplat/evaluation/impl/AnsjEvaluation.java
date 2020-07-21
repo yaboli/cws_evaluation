@@ -87,16 +87,16 @@ public class AnsjEvaluation extends Evaluation implements WordSegmenter{
                     List<Term> terms = null;
                     switch(analysis){
                         case "BaseAnalysis":
-                                terms = BaseAnalysis.parse(text);
+                                terms = BaseAnalysis.parse(text).getTerms();
                                 break;
                         case "ToAnalysis":
-                                terms = ToAnalysis.parse(text);
+                                terms = ToAnalysis.parse(text).getTerms();
                                 break;
                         case "NlpAnalysis":
-                                terms = NlpAnalysis.parse(text);
+                                terms = NlpAnalysis.parse(text).getTerms();
                                 break;
                         case "IndexAnalysis":
-                                terms = IndexAnalysis.parse(text);
+                                terms = IndexAnalysis.parse(text).getTerms();
                                 break;
                     }
                     for(Term term : terms){
