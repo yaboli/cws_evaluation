@@ -68,6 +68,8 @@ public interface WordSegmenter {
         map.put("Jcseg分词器", new JcsegEvaluation().seg(text));
         map.put("MMSeg4j分词器", new MMSeg4jEvaluation().seg(text));
         map.put("IKAnalyzer分词器", new IKAnalyzerEvaluation().seg(text));
+        map.put("ICU4j分词器", new ICU4jEvaluation().seg(text));
+        map.put("THULAC4j分词器", new THULAC4jEvaluation().seg(text));
         return map;
     }
     public static Map<String, Map<String, String>> contrastMore(String text){
@@ -82,6 +84,8 @@ public interface WordSegmenter {
         map.put("Jcseg分词器", new JcsegEvaluation().segMore(text));
         map.put("MMSeg4j分词器", new MMSeg4jEvaluation().segMore(text));
         map.put("IKAnalyzer分词器", new IKAnalyzerEvaluation().segMore(text));
+        map.put("ICU4j分词器", new ICU4jEvaluation().segMore(text));
+        map.put("THULAC4j分词器", new THULAC4jEvaluation().segMore(text));
         return map;
     }
     public static void show(Map<String, Set<String>> map){
